@@ -71,14 +71,14 @@ NM_15/
 - **Milestone**: Mini-Assignment #2
 
 ### Core Objectives Met
-1. ✅ 4+ functional pages with UI logic and meaningful interactions
-2. ✅ Backend setup with Node.js and Express
-3. ✅ API endpoints returning mock data
-4. ✅ Frontend-backend connection with API calls
-5. ✅ Smooth navigation with React Router
-6. ✅ Role-based authentication with login and role return
-7. ✅ Role-based UI behavior (different landing pages, navigation, page blocking)
-8. ✅ Evidence of frontend-backend communication
+1.  4+ functional pages with UI logic and meaningful interactions
+2.  Backend setup with Node.js and Express
+3.  API endpoints returning mock data
+4.  Frontend-backend connection with API calls
+5.  Smooth navigation with React Router
+6.  Role-based authentication with login and role return
+7.  Role-based UI behavior (different landing pages, navigation, page blocking)
+8.  Evidence of frontend-backend communication
 
 For detailed documentation, see: `Documents/Mini-Assignment-2/Mini-Assignment-2-Implementation.txt`
 
