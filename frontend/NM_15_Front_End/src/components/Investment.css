@@ -1,0 +1,155 @@
+.investment-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.investment-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.investment-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.investment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  border-color: #3b82f6;
+}
+
+/* 활성화(펼쳐짐) 상태 스타일 */
+.investment-card.active {
+  border-color: #3b82f6;
+  background-color: #fcfdff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 2rem;
+  background: #f3f4f6;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.title-group h3 {
+  margin: 0 0 5px 0;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+/* 리스크 뱃지 색상 */
+.risk-badge {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-badge.low { background-color: #d1fae5; color: #065f46; }
+.risk-badge.medium { background-color: #fef3c7; color: #92400e; }
+.risk-badge.high { background-color: #fee2e2; color: #b91c1c; }
+.risk-badge.medium-high { background-color: #ffedd5; color: #c2410c; }
+.risk-badge.very-high { background-color: #fce7f3; color: #9d174d; }
+
+.toggle-icon {
+  font-size: 1.5rem;
+  color: #9ca3af;
+  font-weight: bold;
+}
+
+.summary {
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 상세 내용 섹션 */
+.card-details {
+  margin-top: 20px;
+  color: #4b5563;
+}
+
+.card-details hr {
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+  margin: 15px 0;
+}
+
+.detail-text {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.tips-box {
+  background-color: #eff6ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.tips-box h4 {
+  margin: 0 0 10px 0;
+  color: #1e40af;
+  font-size: 1rem;
+}
+
+.tips-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tips-box li {
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+/* 애니메이션 */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .header-left {
+    gap: 10px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  .title-group h3 {
+    font-size: 1rem;
+  }
+}

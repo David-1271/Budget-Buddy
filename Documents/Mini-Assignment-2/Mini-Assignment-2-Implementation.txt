@@ -1,0 +1,150 @@
+Mini-Assignment #2: Frontend Completion & Backend Setup
+=======================================================
+
+Project: Budget Buddy
+Team Member: David Lawlor
+Date: December 5, 2025
+
+OVERVIEW
+--------
+This document outlines the implementation of Mini-Assignment #2 for the Budget Buddy application. The assignment focused on creating functional pages, setting up backend infrastructure, connecting frontend to backend, and implementing role-based access control.
+
+CORE OBJECTIVES COMPLETED
+-------------------------
+
+1. Functional Pages Added
+   - Added two additional functional pages to existing three (Home, Login, Signup), bringing total to 5 pages:
+     * Home Page: Landing page with navigation to signup/login
+     * Login Page: Authentication page with role-based redirect
+     * Signup Page: User registration page
+     * Budget Planner Page: Interactive budget management system
+     * Transaction History Page: Transaction tracking with filtering capabilities
+
+2. Backend Setup with Node.js and Express
+   - Node.js and Express server implementation
+   - CORS middleware for cross-origin requests
+   - Environment configuration with dotenv
+   - Authentication routes for login and signup
+   - API endpoints for transactions, budgets, and dashboard stats
+   - Sample mock data for demonstration
+
+3. API Implementation and Frontend Connection
+   - Created API service module for handling HTTP requests
+   - Implemented authentication API calls (login, signup)
+   - Added data API calls (transactions, budgets, dashboard stats)
+   - Connected all frontend components to the backend API
+   - Added error handling and loading states
+   - Implemented fallback to mock data when API fails
+
+4. React Router Implementation
+   - Replaced manual page switching with React Router
+   - Set up route protection with role-based access
+   - Created protected routes for authenticated users
+   - Implemented navigation between all pages
+   - Added unauthorized access handling
+
+ROLE-BASED AUTHENTICATION IMPLEMENTATION
+----------------------------------------
+
+Backend Authentication Routes:
+- POST /api/auth/login: Authenticates users and returns role information
+- POST /api/auth/signup: Registers new users as 'user' role (admins are pre-created)
+
+Frontend Role-Based Behaviors:
+1. Landing Page Behavior:
+   - Unauthenticated users see the home page
+   - Admin users are redirected to Budget Planner
+   - Regular users are redirected to Transaction History
+
+2. Navigation Control:
+   - Protected routes only accessible by authorized users
+   - Unauthorized users redirected to unauthorized page
+
+3. Page Blocking:
+   - Unauthorized page shows "Not Authorized" message
+   - Proper role validation before accessing protected routes
+
+Sample Response Format:
+{
+  "success": true,
+  "user": {
+    "id": 1,
+    "email": "admin@example.com",
+    "firstName": "Admin",
+    "lastName": "User",
+    "role": "admin"
+  }
+}
+
+KEY FEATURES IMPLEMENTED
+------------------------
+
+Budget Planner Page:
+- Interactive budget creation form
+- Visual budget tracking with progress bars
+- Calculated summary statistics (total budgeted, spent, remaining)
+- Role-based message display for admin users
+
+Transaction History Page:
+- Transaction filtering (income vs expense vs all)
+- Date range filtering
+- Summary cards showing income, expenses, and balance
+- Role-based message display for admin users
+
+TESTING CREDENTIALS
+-------------------
+For testing the role-based functionality, use these credentials:
+
+Admin User:
+- Email: admin@example.com
+- Password: admin123
+- Role: admin
+
+Regular User:
+- Email: user@example.com
+- Password: user123
+- Role: user
+
+TECHNICAL STACK
+---------------
+- Frontend: React, React Router DOM, JavaScript, CSS
+- Backend: Node.js, Express, CORS, Dotenv
+- API Communication: Fetch API
+- Development Tools: Vite, npm
+
+REPOSITORY STRUCTURE
+--------------------
+NM_15/
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+└── frontend/
+    └── NM_15_Front_End/
+        ├── src/
+        │   ├── components/
+        │   ├── api/
+        │   └── App.jsx
+        └── package.json
+
+GITLAB REQUIREMENTS
+-------------------
+- Issue: "Implement Budget Planner and Transaction History Pages"
+- Branch: 3-budget-transactions-features
+- Milestone: Mini-Assignment #2
+- The feature branch can be found at: https://github.com/david-lawlor/NM_15/tree/3-budget-transactions-features
+
+CONCLUSION
+----------
+Mini-Assignment #2 has been successfully completed with all required objectives met:
+✓ Four functional pages (actually implemented 5: Home, Login, Signup, Budget Planner, Transaction History)
+✓ Backend setup with Node.js and Express
+✓ API endpoints returning mock data
+✓ Frontend-backend connection with API calls
+✓ React Router implementation for smooth navigation
+✓ Role-based authentication with login and mock users
+✓ Role-based UI behavior with landing page and navigation changes
+✓ Page blocking for unauthorized access
+✓ Documentation and evidence of functionality
+
+The application now demonstrates full stack communication, role-based access control, and a complete user experience across multiple pages.
